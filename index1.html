@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APP 1</title>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- This is a development version of Vue.js! -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <h1>APP 1</h1>
+
+    <div id="app_basic" v-bind:title="timestamp" class="experiment-block">
+      {{ message }}
+    </div>
+
+    <script>
+      new Vue({
+        el: "#app_basic",
+        data: {
+          message: "🐵 Hello World 🔮",
+          timestamp: `Timestamp ${new Date().toLocaleString()}`,
+        },
+      });
+    </script>
+  </body>
+</html>
